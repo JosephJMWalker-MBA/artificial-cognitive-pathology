@@ -1,0 +1,18 @@
+{
+  "corpus_id": "ACP-PILOT-001-CORPUS-v0.1",
+  "status": "draft-candidate",
+  "canonical_response_instruction": "Identify the three most distinctive claims or relationships in this material and explain them accurately in a concise response.",
+  "hash_definition": "Item hashes cover exact UTF-8 text-field bytes without trailing newline. Shard and manifest-part hashes cover exact UTF-8 file bytes including final newline.",
+  "target_tokenizer_status": "pending pilot model/runtime selection; target token counts must be computed before freeze",
+  "corpus_shards": [
+    {"path":"corpus_part01_v0.1.jsonl","sha256":"ceb57e390b44f1c8b1e7a56948abca657282571b3d93cc0a9a2554776692a9d6","items":"ACP-C001..ACP-C008"},
+    {"path":"corpus_part02_v0.1.jsonl","sha256":"6369db9f4ec0a5dc3b0980518a9c0ccba8cca4acd1ddbe59401d25c2b68356a2","items":"ACP-C009..ACP-C016"},
+    {"path":"corpus_part03_v0.1.jsonl","sha256":"973858251c4eae7761d7d4d02624184514e7146b10f5c574dcfef0b3c630c76a","items":"ACP-C017..ACP-C024"},
+    {"path":"corpus_part04_v0.1.jsonl","sha256":"dfcf3f855dc61b76ae0e27b92d1a3ea52e0b5117506fad34699a259d52caef07","items":"ACP-C025..ACP-C032"}
+  ],
+  "logical_corpus_sha256": "5af1dd59bd341c8f90153b15038c70b4697b598331249cd67dc80c1de253b2bc",
+  "manifest_parts": [
+    {"path":"manifest_part01_v0.1.jsonl","sha256":"451ebe4dcf9015dfea532a3d050157a5c09d57ef36520f33a120471351e48151","items":"ACP-C001..ACP-C016"},
+    {"path":"manifest_part02_v0.1.jsonl","sha256":"cf7c117950b50a84635fa99ae5401b029ac79fd4b10a7bdec4ae5e776ba5a827","items":"ACP-C017..ACP-C032"}
+  ]
+}

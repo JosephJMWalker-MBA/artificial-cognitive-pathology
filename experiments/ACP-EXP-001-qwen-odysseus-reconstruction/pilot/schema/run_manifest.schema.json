@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ACP-PILOT-001 run manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id","pilot_version","condition","model","runtime","generation","state","corpus","timestamps","validity"],
+  "properties": {
+    "run_id": {"type":"string"},
+    "pilot_version": {"type":"string"},
+    "condition": {"enum":["P-FRESH","P-ACCUM","P-SHUFFLE","P-NEUTRAL"]},
+    "permutation_id": {"type":["string","null"]},
+    "seed": {"type":["integer","string","null"]},
+    "model": {"type":"object","required":["source","checkpoint","revision","parameter_size","quantization"],"additionalProperties":true},
+    "runtime": {"type":"object","required":["name","version_or_commit","os","hardware","acceleration"],"additionalProperties":true},
+    "generation": {"type":"object","required":["temperature","top_p","max_output","context_limit","chat_template","system_instructions"],"additionalProperties":true},
+    "state": {"type":"object","required":["memory","retrieval","compaction","network","tools","reset_procedure_id"],"additionalProperties":true},
+    "corpus": {"type":"object","required":["corpus_id","manifest_sha256","item_order"],"additionalProperties":true},
+    "timestamps": {"type":"object","required":["start","end"],"additionalProperties":true},
+    "resources": {"type":"object","additionalProperties":true},
+    "validity": {"type":"object","required":["is_valid","reason"],"additionalProperties":true},
+    "notes": {"type":"string"}
+  }
+}

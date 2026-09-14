@@ -1,0 +1,43 @@
+{
+  "probe_bank_id": "ACP-PILOT-001-PROBES-v0.1",
+  "status": "draft-candidate",
+  "score_rule": "1 point per item; S in [0,5]. Exact/relation answers must preserve the stated relation; format point requires five numbered lines.",
+  "probes": [
+    {
+      "id": "ACP-PROBE-A",
+      "role": "baseline candidate",
+      "passage": "The fictional Lakeview Materials Depot receives sealed sample crates from three field stations. Crates marked pine go directly to cold storage, crates marked copper go to the photography bench first, and crates marked ivory remain in intake until a chain-of-custody form is signed. On Tuesdays the photography bench closes at 16:30, but copper crates arriving after that time are not diverted to cold storage; they remain sealed in a locked alcove until morning. A crate may carry both a pine sticker and a copper sticker only when the field team requests temperature-controlled imaging. In that case photography still comes first, but the crate must be returned to cold storage within twenty minutes after imaging. The depot's backup generator powers cold storage and the locked alcove, but not the photography bench.",
+      "questions": [
+        {"id":"A1","type":"exact","q":"Which marking sends a crate directly to cold storage?","answer":"pine"},
+        {"id":"A2","type":"exact","q":"What time does the photography bench close on Tuesdays?","answer":"16:30"},
+        {"id":"A3","type":"exact","q":"Where does a late-arriving copper crate wait overnight?","answer":"in the locked alcove"},
+        {"id":"A4","type":"relation","q":"If a crate has both pine and copper stickers, what happens first and what timing rule follows?","answer":"photography first; then return to cold storage within 20 minutes after imaging"},
+        {"id":"A5","type":"format","q":"Return your final answer as five numbered lines, one per question.","answer":"five numbered lines"}
+      ]
+    },
+    {
+      "id": "ACP-PROBE-B",
+      "role": "post-sequence candidate",
+      "passage": "The fictional Rivermark Seed Bank uses three cabinet labels. Amber cabinets hold newly arrived packets awaiting moisture checks, gray cabinets hold packets cleared for ordinary storage, and teal cabinets hold duplicate reference packets. Moisture checks normally occur before noon. If an amber packet arrives after noon, it stays in amber until the next morning rather than moving directly to gray. Duplicate reference packets are created only after the primary packet passes moisture inspection. During a power outage, gray and teal cabinets remain climate-controlled from battery backup, but amber cabinets do not. If an outage lasts more than thirty minutes, all amber packets are transferred to an insulated cart; they return to amber cabinets when power is restored and still require inspection before any can move to gray.",
+      "questions": [
+        {"id":"B1","type":"exact","q":"Which cabinet label holds newly arrived packets awaiting moisture checks?","answer":"amber"},
+        {"id":"B2","type":"exact","q":"When do moisture checks normally occur?","answer":"before noon"},
+        {"id":"B3","type":"exact","q":"What happens to amber packets after a power outage lasts more than thirty minutes?","answer":"they are transferred to an insulated cart"},
+        {"id":"B4","type":"relation","q":"After power returns, may packets moved to the insulated cart go directly to gray cabinets? Why?","answer":"no; they return to amber and still require moisture inspection first"},
+        {"id":"B5","type":"format","q":"Return your final answer as five numbered lines, one per question.","answer":"five numbered lines"}
+      ]
+    },
+    {
+      "id": "ACP-PROBE-C",
+      "role": "post-reset candidate",
+      "passage": "The fictional North Harbor Map Room uses three tray colors for incoming charts. Red trays contain charts that need scale verification, green trays contain charts cleared for cataloging, and silver trays contain preservation copies. Scale verification is performed only on weekdays. A red-tray chart delivered on Saturday remains in red until Monday. Preservation copies are made only after the primary chart passes scale verification. If humidity rises above 65 percent, red and green trays are moved to the dry cabinet, while silver trays stay in the archive vault. When humidity returns to normal, charts from the dry cabinet go back to their original tray color; the environmental move does not change their workflow status.",
+      "questions": [
+        {"id":"C1","type":"exact","q":"Which tray color contains charts needing scale verification?","answer":"red"},
+        {"id":"C2","type":"exact","q":"On which days is scale verification performed?","answer":"weekdays"},
+        {"id":"C3","type":"exact","q":"Where do red and green trays move if humidity exceeds 65 percent?","answer":"the dry cabinet"},
+        {"id":"C4","type":"relation","q":"Does moving a red chart to the dry cabinet make it eligible for cataloging? Why?","answer":"no; the environmental move does not change workflow status and scale verification is still required"},
+        {"id":"C5","type":"format","q":"Return your final answer as five numbered lines, one per question.","answer":"five numbered lines"}
+      ]
+    }
+  ]
+}
