@@ -119,7 +119,7 @@ This project adopts several default commitments:
 9. **Recovery is measurable.** Experiments should test not only failure induction but whether resets, contradictions, state pruning, or other interventions restore baseline behavior.
 10. **The framework itself is falsifiable.** ACP should be narrowed or abandoned if evidence shows the proposed grouping adds no explanatory or predictive value.
 
-Detailed standards are in [`RESEARCH_METHODS.md`](RESEARCH_METHODS.md).
+Detailed standards are in [`RESEARCH_METHODS.md`](RESEARCH_METHODS.md). Language and reporting guidance for avoiding unsupported anthropomorphic claims is in [`NON_ANTHROPOMORPHIC_LANGUAGE.md`](NON_ANTHROPOMORPHIC_LANGUAGE.md).
 
 ## Safety boundary
 
@@ -134,14 +134,15 @@ See [`SCOPE_AND_BOUNDARIES.md`](SCOPE_AND_BOUNDARIES.md) and [`SECURITY.md`](SEC
 ## Repository structure
 
 ```text
-README.md                    Research charter
-RESEARCH_METHODS.md          Experimental and reporting standards
-SCOPE_AND_BOUNDARIES.md      Conceptual, clinical, and safety boundaries
-CONTRIBUTING.md              How to propose and contribute research
-SECURITY.md                  Responsible experimentation and disclosure
-hypotheses/                  Falsifiable hypothesis registry
-cases/                       Observations and case reports
-experiments/                 Protocols, runs, replications, and results
+README.md                         Research charter
+RESEARCH_METHODS.md               Experimental and reporting standards
+SCOPE_AND_BOUNDARIES.md           Conceptual, clinical, and safety boundaries
+NON_ANTHROPOMORPHIC_LANGUAGE.md   Operational language and reporting guide
+CONTRIBUTING.md                   How to propose and contribute research
+SECURITY.md                       Responsible experimentation and disclosure
+hypotheses/                       Falsifiable hypothesis registry
+cases/                            Observations and case reports
+experiments/                      Protocols, runs, replications, and results
 ```
 
 Additional directories for metrics, literature reviews, datasets, and publications will be added when the work requires them rather than in advance.
