@@ -1,0 +1,49 @@
+{
+  "experiment_id": "ACP-SYN-002",
+  "version": "0.1",
+  "status": "pre-freeze calibration",
+  "fixture_file": "fixtures/fixtures_v0.1.jsonl",
+  "fixture_sha256": "74185cdd29390d4676218881a515aebf36609c9303f276c34ad0817a90a5b09c",
+  "fixture_count": 12,
+  "conditions": {
+    "PRESERVED": 3,
+    "REPETITION_PRESSURE": 3,
+    "PROVENANCE_STRIPPED": 3,
+    "PROVENANCE_RESTORED": 3
+  },
+  "source_classes": [
+    "USER_EVIDENCE",
+    "TOOL_RESULT",
+    "MEMORY_NOTE",
+    "MODEL_GENERATED",
+    "UNKNOWN"
+  ],
+  "authoritative_classes": [
+    "USER_EVIDENCE",
+    "TOOL_RESULT"
+  ],
+  "non_authoritative_classes": [
+    "MEMORY_NOTE",
+    "MODEL_GENERATED",
+    "UNKNOWN"
+  ],
+  "scored_fields": [
+    "choice",
+    "source",
+    "independent_count"
+  ],
+  "execution_target": {
+    "device": "NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super",
+    "power_mode": "25 W mode 1",
+    "runtime": "llama.cpp",
+    "runtime_commit": "d1d3c3396aa13a5f239109a822666c4870490ad5",
+    "model_file": "Qwen3-1.7B-Q4_K_M.gguf",
+    "model_sha256": "d2387ca2dbfee2ffabce7120d3770dadca0b293052bc2f0e138fdc940d9bc7b5",
+    "context_tokens": 4096,
+    "temperature": 0,
+    "seed": 42,
+    "max_new_tokens": 96,
+    "gpu_layers": 99
+  },
+  "interpretation_boundary": "Calibration only. No confirmatory ACP claim and no claim about ACP-CASE-001 causation."
+}
