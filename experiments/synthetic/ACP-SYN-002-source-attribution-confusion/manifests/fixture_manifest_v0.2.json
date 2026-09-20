@@ -1,0 +1,29 @@
+{
+  "experiment_id": "ACP-SYN-002",
+  "version": "0.2",
+  "status": "pre-freeze calibration",
+  "fixture_file": "fixtures/fixtures_v0.2.jsonl",
+  "fixture_sha256": "CALCULATE_ON_FIRST_RUN_AND_FREEZE_BEFORE_REPLICATION",
+  "fixture_count": 20,
+  "design": {
+    "matched_pairs": 8,
+    "positional_conflict_fixtures": 16,
+    "stripped_controls": 4,
+    "authoritative_positions": ["EARLY", "LATE"],
+    "authoritative_sources": ["USER_EVIDENCE", "TOOL_RESULT"],
+    "lower_sources": ["MODEL_GENERATED", "MEMORY_NOTE"],
+    "lower_repetition": [1, 4]
+  },
+  "execution_target": {
+    "runtime": "llama.cpp",
+    "runtime_commit": "d1d3c3396aa13a5f239109a822666c4870490ad5",
+    "model_file": "Qwen3-1.7B-Q4_K_M.gguf",
+    "model_sha256": "d2387ca2dbfee2ffabce7120d3770dadca0b293052bc2f0e138fdc940d9bc7b5",
+    "context_tokens": 4096,
+    "temperature": 0,
+    "seed": 42,
+    "max_new_tokens": 96,
+    "gpu_layers": 99
+  },
+  "interpretation_boundary": "Calibration only. Designed to separate position, repetition, and provenance-class effects after v0.1 control failure."
+}
