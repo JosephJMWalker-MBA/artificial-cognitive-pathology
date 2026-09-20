@@ -1,0 +1,26 @@
+{
+  "experiment_id": "ACP-SYN-002",
+  "version": "0.4",
+  "status": "pre-freeze calibration",
+  "fixture_file": "fixtures/fixtures_v0.4.jsonl",
+  "fixture_sha256": "CALCULATE_ON_FIRST_RUN_AND_FREEZE_BEFORE_REPLICATION",
+  "fixture_count": 40,
+  "design": {
+    "label_sets": ["SEMANTIC", "NEUTRAL"],
+    "policies": ["CANONICAL", "INVERTED"],
+    "tasks": ["LABEL_ONLY", "RECORD"],
+    "classes_per_label_set": 5
+  },
+  "execution_target": {
+    "runtime": "llama.cpp",
+    "runtime_commit": "d1d3c3396aa13a5f239109a822666c4870490ad5",
+    "model_file": "Qwen3-1.7B-Q4_K_M.gguf",
+    "model_sha256": "d2387ca2dbfee2ffabce7120d3770dadca0b293052bc2f0e138fdc940d9bc7b5",
+    "context_tokens": 4096,
+    "temperature": 0,
+    "seed": 42,
+    "max_new_tokens": 64,
+    "gpu_layers": 99
+  },
+  "interpretation_boundary": "Calibration only. Tests arbitrary rule compliance using semantic and neutral source labels."
+}
