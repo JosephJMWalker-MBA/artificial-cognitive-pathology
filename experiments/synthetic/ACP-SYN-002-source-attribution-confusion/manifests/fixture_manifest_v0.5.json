@@ -1,0 +1,32 @@
+{
+  "experiment_id": "ACP-SYN-002",
+  "version": "0.5",
+  "status": "pre-freeze calibration",
+  "fixture_file": "fixtures/fixtures_v0.5.jsonl",
+  "fixture_sha256": "CALCULATE_ON_FIRST_RUN_AND_FREEZE_BEFORE_REPLICATION",
+  "fixture_count": 160,
+  "design": {
+    "semantic_families": ["S1", "S2"],
+    "neutral_families": ["N1", "N2"],
+    "policies": {
+      "P0": [true, true, false, false, false],
+      "P1": [false, false, true, true, true],
+      "P2": [true, false, true, false, true],
+      "P3": [false, true, false, true, false]
+    },
+    "tasks": ["LABEL_ONLY", "RECORD"],
+    "semantic_canonical_prior": [true, true, false, false, false]
+  },
+  "execution_target": {
+    "runtime": "llama.cpp",
+    "runtime_commit": "d1d3c3396aa13a5f239109a822666c4870490ad5",
+    "model_file": "Qwen3-1.7B-Q4_K_M.gguf",
+    "model_sha256": "d2387ca2dbfee2ffabce7120d3770dadca0b293052bc2f0e138fdc940d9bc7b5",
+    "context_tokens": 4096,
+    "temperature": 0,
+    "seed": 42,
+    "max_new_tokens": 64,
+    "gpu_layers": 99
+  },
+  "interpretation_boundary": "Calibration first; freeze exact fixture hash before deterministic replication."
+}
